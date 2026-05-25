@@ -35,13 +35,13 @@ It highlights operational pressure, patient flow, and performance against the 4â
 
 ### **Screenshots**
 #### Full Dashboard  
-![Dashboard Full](powerbi\Screenshot\dashboard_full.png)
+(powerbi\Screenshot\dashboard_full.png)
 
 #### KPI Row  
-![KPI Row](powerbi\Screenshot\kpi_row.png)
+(powerbi\Screenshot\kpi_row.png)
 
 #### Charts Section  
-![Charts Section](powerbi\Screenshot\charts_section.jpg) 
+(powerbi\Screenshot\charts_section.jpg) 
 
 ---
 
