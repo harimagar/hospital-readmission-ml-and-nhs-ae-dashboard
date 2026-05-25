@@ -15,6 +15,11 @@ Monthly A&E Time Series — March 2026 (Revised 14.05.26)
 Source: NHS England, A&E Attendances and Emergency Admissions
 https://www.england.nhs.uk/statistics/statistical-work-areas/ae-waiting-times-and-activity/
 
+## 📄 A&E Performance Dashboard Report
+This project includes a full professional report documenting the A&E Performance Dashboard built using NHS England’s Monthly A&E dataset (March 2026 – Revised 14.05.26).
+
+You can view the report here:
+https://github.com/harimagar/hospital-readmission-ml-and-nhs-ae-dashboard/tree/main/docs
 
 ## 📊 Phase 1 — A&E Performance Dashboard (Power BI)
 
