@@ -1,9 +1,10 @@
 # NHS A&E Performance Dashboard & Hospital Readmission ML Project
 
+## 📝 Project Overview
 This repository contains a complete end‑to‑end data analytics and machine learning project combining:
 
-- A **Power BI dashboard** analysing NHS England A&E performance  
-- A **Machine Learning model** (Phase 2) predicting hospital readmission risk  
+- A Power BI dashboard analysing NHS England A&E performance (Phase 1)
+- A Machine Learning model predicting hospital readmission risk using the UCI Diabetic Readmission dataset (Phase 2)
 
 The project demonstrates strong skills in data cleaning, DAX, visual analytics, Python, ML modelling, and documentation — suitable for NHS data roles, analytics positions, and academic research portfolios.
 
