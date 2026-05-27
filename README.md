@@ -116,7 +116,7 @@ Notebook: 04_evaluation.ipynb
 - Summary Table
 
 **📄 Full ML Model Report**
- 
+ https://github.com/harimagar/hospital-readmission-ml-and-nhs-ae-dashboard/tree/main/docs
 
 
 **🛠 Tools & Technologies**
