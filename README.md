@@ -1,111 +1,178 @@
-# NHS A&E Performance Dashboard & Hospital Readmission ML Project
+**📝 Project Overview**
+This repository contains a complete two‑phase healthcare analytics project combining:
 
-## 📝 Project Overview
-This repository contains a complete end‑to‑end data analytics and machine learning project combining:
+**🔹 Phase 1 — NHS A&E Performance Dashboard (Power BI)**
+A full BI solution analysing NHS England A&E performance using official datasets.
 
-- A Power BI dashboard analysing NHS England A&E performance (Phase 1)
-- A Machine Learning model predicting hospital readmission risk using the UCI Diabetic Readmission dataset (Phase 2)
+**🔹 Phase 2 — Hospital Readmission Prediction (Machine Learning)**
+A complete ML pipeline predicting 30‑day readmission for diabetic patients using the UCI Diabetic Readmission dataset.
+This project demonstrates:
+- Data cleaning & transformation
+- DAX & Power BI modelling
+- Python‑based ML pipeline
+- Feature engineering
+- Model evaluation
+- Documentation & reproducibility
 
-The project demonstrates strong skills in data cleaning, DAX, visual analytics, Python, ML modelling, and documentation — suitable for NHS data roles, analytics positions, and academic research portfolios.
-
----
-
-### 📂 Data Source
-Official NHS England dataset:
-Monthly A&E Time Series — March 2026 (Revised 14.05.26)
-Source: NHS England, A&E Attendances and Emergency Admissions
+**📂 Data Sources**
+**Phase 1 — NHS A&E Dataset**
+- NHS England Monthly A&E Time Series (March 2026 – Revised 14.05.26)
+- Source:
 https://www.england.nhs.uk/statistics/statistical-work-areas/ae-waiting-times-and-activity/
 
-## 📄 A&E Performance Dashboard Report
-This project includes a full professional report documenting the A&E Performance Dashboard built using NHS England’s Monthly A&E dataset (March 2026 – Revised 14.05.26).
+**Phase 2 — Diabetic Readmission Dataset**
+- UCI Machine Learning Repository
+- 101,766 hospital encounters
+- Target variable: readmitted_30 (1 = readmitted within 30 days)Source:
+- Dataset link:
+https://archive.ics.uci.edu/dataset/296/diabetes+130-us+hospitals+for+years+1999-2008
 
-You can view the report here:
-https://github.com/harimagar/hospital-readmission-ml-and-nhs-ae-dashboard/tree/main/docs
+**📊 Phase 1 — NHS A&E Performance Dashboard (Power BI)**
+The dashboard provides a clear overview of emergency care performance across NHS Integrated Care Boards (ICBs), highlighting operational pressure, patient flow, and performance against the 4‑hour standard.
 
-## 📊 Phase 1 — A&E Performance Dashboard (Power BI)
+**⭐ Key KPIs**
+- Total Attendances: 2M
+- 4‑Hour Performance (All): 0.76
+- Total Emergency Admissions: 554K
 
-The dashboard provides a clear overview of emergency care performance across NHS Integrated Care Boards (ICBs).  
-It highlights operational pressure, patient flow, and performance against the 4‑hour standard.
+**⭐ Main Visuals**
+- Attendances by ICB
+- 4‑Hour Performance by ICB
+- Emergency Admissions by ICB
+- Geographic performance map
+- KPI summary row
+- Interactive slicers
 
-### **Key KPIs**
-- **Total Attendances:** 2M  
-- **4‑Hour Performance (All):** 0.76  
-- **Total Emergency Admissions:** 554K  
-
-### **Main Visuals**
-- Total Attendances by ICB  
-- 4‑Hour Performance by ICB  
-- Emergency Admissions by ICB  
-- Geographic performance map  
-- ICB slicer for interactive filtering  
-
-### **Screenshots**
-#### Full Dashboard  
+**⭐ Dashboard Screenshots**
+ Full Dashboard  
 ![Dashboard Full](powerbi/Screenshot/dashboard_full.png)
 
-#### KPI Row  
+ KPI Row  
 ![KPI Row](powerbi/Screenshot/kpi_row.png)
 
-#### Charts Section  
+ Charts Section  
 ![Charts Section](powerbi/Screenshot/charts_section.jpg)
 
+**⭐ DAX Measures Used**
+- Total Attendances = SUM(cleaned_ae_system_level[Total Attendances])
+- 4hr Performance (All) = AVERAGE(cleaned_ae_system_level[Perf_4hr_All])
+- Total Emergency Admissions = SUM(cleaned_ae_system_level[EA_Total])
 
-## 🧮 DAX Measures Used
 
-Total Attendances = SUM(cleaned_ae_system_level[Total Attendances])
+**📄 Full A&E Dashboard Report**
+Available in /docs  
+https://github.com/harimagar/hospital-readmission-ml-and-nhs-ae-dashboard/tree/main/docs
 
-4hr Performance (All) = AVERAGE(cleaned_ae_system_level[Perf_4hr_All])
+**🤖 Phase 2 — Hospital Readmission ML Model**
+**1. Exploratory Data Analysis**
+Notebook: 01_data_exploration.ipynb
+- Dataset structure
+- Missing values
+- Target distribution
+- Diagnosis code patterns
+- Numeric summaries
 
-Total Emergency Admissions = SUM(cleaned_ae_system_level[EA_Total])
+**2. Preprocessing & Feature Engineering**
+Notebook: 02_preprocessing_feature_engineering.ipynb
+✔ Missing Value Handling
+- Replace '?' with NaN
+- Drop high‑missing columns
+- Fill categorical missing values with "Unknown"
 
----
+✔ Target Engineering
+- <30 → 1
+- NO → 0
+- >30 → 0
+  
+✔ Encoding
+- Convert to category dtype
+- One‑hot encode
+- Clean column names for XGBoost
 
-## 📁 Folder Structure
+✔ Scaling
+- StandardScaler applied to numeric features
 
+✔ Output
+Processed dataset saved to:
+- data/processed/processed_diabetic_data.csv
+![Processed](docs\output_screenshot\preprocessed.PNG)
+
+**3. Model Training**
+Notebook: 03_model_training.ipynb
+Models trained:
+![Model trained result](docs\output_screenshot\model_accuracy_roc_auc.PNG)
+Best model saved to:
+models/xgb_readmission.pkl
+![Best Model](docs\output_screenshot\best_model.PNG)
+
+**4. Model Evaluation**
+Notebook: 04_evaluation.ipynb
+- Confusion Matrix
+- Classification Report
+- ROC Curve
+- Precision‑Recall Curve
+- Calibration Curve
+- Feature Importance
+- Summary Table
+
+**📄 Full ML Model Report**
+ 
+
+
+**🛠 Tools & Technologies**
+Power BI
+- DAX
+- Data modelling
+- Visual analytics
+
+Python
+- Pandas
+- NumPy
+- Scikit‑Learn
+- XGBoost
+- Matplotlib / Seaborn
+
+Other
+- Git & GitHub
+- Jupyter Notebook
+- NHS England Open Data
+
+
+**📁 Folder Structure**
 hospital-readmission-ml-and-nhs-ae-dashboard/
 │
-├── data/                     # Raw and cleaned datasets
-├── docs/                     # Documentation reports
-├── notebooks/                # Jupyter notebooks (ML)
+├── data/
+│   ├── ae_raw/
+│   ├── ml_raw/
+│   ├── processed/
+│
+├── docs/
+│   ├── A&E_Performance_Dashboard_Report_March_2024.pdf
+│   └── phase2_ml_report.pdf
+│
+├── models/
+│   └── xgb_readmission.pkl
+│
+├── notebooks/
+│   ├── 01_data_exploration.ipynb
+│   ├── 02_preprocessing_feature_engineering.ipynb
+│   ├── 03_model_training.ipynb
+│   └── 04_evaluation.ipynb
+│
 ├── powerbi/
-│   ├── A&E_Dashboard.pbix
-│   └── screenshots/
-│       ├── dashboard_full.png
-│       ├── kpi_row.png
-│       └── charts_section.png
-├── src/                      # Python scripts for ML pipeline
-├── README.md
-└── LICENSE
+│   ├── Screenshot/
+│   └── hospital_ae_dashboard.pbix
+│
+├── src/
+│   ├── ml_preprocessing.py
+│   ├── ml_feature_engineering.py
+│   ├── ml_models.py
+│   └── ml_utils.py
+│
+└── README.md
 
 
----
+👤 Author
+Hari Gharti Magar
+MSc Data Science with Advanced Research (UK)
 
-## 🛠 Tools & Technologies
-
-- **Power BI** (DAX, data modelling, visualisation)  
-- **Python** (Pandas, NumPy, Scikit‑Learn, Matplotlib, Seaborn)  
-- **Jupyter Notebook**  
-- **Git & GitHub**  
-- **NHS England Open Data**  
-
----
-
-## 🔥 Phase 2 — Hospital Readmission ML Model (Coming Next)
-
-Phase 2 will include:
-
-- Data cleaning & preprocessing  
-- Exploratory Data Analysis (EDA)  
-- Feature engineering  
-- Model training (Logistic Regression, Random Forest, XGBoost)  
-- ROC‑AUC evaluation  
-- Feature importance  
-- Model saving & deployment-ready structure  
-
-This will turn the project into a complete **end‑to‑end analytics + ML pipeline**.
-
----
-
-## 📌 Author  
-Hari — MSc Data Science with Advance Research (UK)  
-NHS Data & Analytics Portfolio Project  
