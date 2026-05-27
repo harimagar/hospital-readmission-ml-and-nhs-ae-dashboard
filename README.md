@@ -95,15 +95,15 @@ Notebook: 02_preprocessing_feature_engineering.ipynb
 ✔ Output
 Processed dataset saved to:
 - data/processed/processed_diabetic_data.csv
-![Processed](docs\output_screenshot\preprocessed.PNG)
+![Processed](docs/output_screenshot/preprocessed.PNG)
 
 **3. Model Training**
 Notebook: 03_model_training.ipynb
 Models trained:
-![Model trained result](docs\output_screenshot\model_accuracy_roc_auc.PNG)
+![Model trained result](docs/output_screenshot/model_accuracy_roc_auc.PNG)
 Best model saved to:
 models/xgb_readmission.pkl
-![Best Model](docs\output_screenshot\best_model.PNG)
+![Best Model](docs/output_screenshot/best_model.PNG)
 
 **4. Model Evaluation**
 Notebook: 04_evaluation.ipynb
