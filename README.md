@@ -140,28 +140,21 @@ Other
 
 **📁 Folder Structure**
 hospital-readmission-ml-and-nhs-ae-dashboard/
+project/
 │
 ├── data/
-│   ├── ae_raw/
-│   ├── ml_raw/
-│   ├── processed/
-│
-├── docs/
-│   ├── A&E_Performance_Dashboard_Report_March_2024.pdf
-│   └── phase2_ml_report.pdf
-│
-├── models/
-│   └── xgb_readmission.pkl
+│   ├── ae_raw/                     # Raw NHS A&E dataset
+│   ├── ml_raw/                     # Raw diabetic readmission dataset
+│   └── processed/                  # Cleaned & processed datasets
 │
 ├── notebooks/
-│   ├── 01_data_exploration.ipynb
+│   ├── nhs_dashboard/              # Power BI data prep notebooks
+│   │   └── 01_data_exploration.ipynb
+│   │
+│   ├── 01_eda_diabetic.ipynb
 │   ├── 02_preprocessing_feature_engineering.ipynb
 │   ├── 03_model_training.ipynb
 │   └── 04_evaluation.ipynb
-│
-├── powerbi/
-│   ├── Screenshot/
-│   └── hospital_ae_dashboard.pbix
 │
 ├── src/
 │   ├── ml_preprocessing.py
@@ -169,7 +162,22 @@ hospital-readmission-ml-and-nhs-ae-dashboard/
 │   ├── ml_models.py
 │   └── ml_utils.py
 │
-└── README.md
+├── models/
+│   └── xgb_readmission.pkl
+│
+├── powerbi/
+│   ├── hospital_ae_dashboard.pbix
+│   └── Screenshot/
+│
+├── docs/
+│   ├── reports/
+│   ├── output_screenshot/
+│  
+│
+├── README.md
+├── requirements.txt
+└── .gitignore
+
 
 
 👤 Author
