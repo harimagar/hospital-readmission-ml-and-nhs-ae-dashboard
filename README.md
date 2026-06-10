@@ -43,6 +43,24 @@ The dashboard provides a clear overview of emergency care performance across NHS
 - KPI summary row
 - Interactive slicers
 
+### 🏥 A&E Department Types (NHS Standard Classification)
+
+**Type 1 — Major Emergency Departments**
+- Consultant‑led, open 24/7
+- Full resuscitation facilities
+- Treat all emergency conditions
+- Example: Large hospital A&E departments
+
+**Type 2 — Single‑Specialty Emergency Departments**
+- Consultant‑led but specialty‑specific
+- Examples: Eye casualty units, dental emergency units, paediatric emergency units
+
+**Type 3 — Urgent Treatment Centres / Minor Injury Units**
+- Non‑consultant led
+- Treat minor illnesses and injuries
+- Examples: Walk‑in centres, UTCs, community urgent care units
+
+
 **⭐ Dashboard Screenshots**
  Full Dashboard  
 ![Dashboard Full](powerbi/Screenshot/dashboard_full.png)
