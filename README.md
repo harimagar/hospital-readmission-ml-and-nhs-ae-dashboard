@@ -190,7 +190,7 @@ project/
 ├── docs/
 │   ├── reports/
 │   ├── output_screenshot/
-│  
+│   └── project architecture.png
 │
 ├── README.md
 ├── requirements.txt
